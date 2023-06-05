@@ -53,8 +53,9 @@ To run the API, follow these steps:
    the created database via pgAdmin, email: admin@admin.com & password: root
    and the host that the database is running is db
 4. Inside the postgres server create the database that you want to use and apply
-   the migrations located in /db/schema.sql
-5. Populate the database using the file /db/data.sql
+   the migrations located in /db/schema.sql file
+5. Create the views using the /db/views.sql file
+5. Populate the database using the file /db/data.sql file
 6. Run the application:
    Linux/MacOS
    ```shell
