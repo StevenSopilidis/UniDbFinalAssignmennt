@@ -1,0 +1,20 @@
+version: '3.8'
+services: 
+  db:
+    container_name: db
+    image: postgis/postgis:15-3.3-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: guest
+      POSTGRES_PASSWORD: guest
+    ports:
+      - "5432:5432"
+  pgadmin:
+    container_name: pgadmin4
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: DB_PASSWORD
+    ports:
+      - "5050:80"
