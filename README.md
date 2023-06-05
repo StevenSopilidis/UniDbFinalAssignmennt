@@ -43,8 +43,12 @@ To run the API, follow these steps:
 2. Install the dependencies located in the `go.mod` file by running the following command:
    ```shell
    go mod download
+   ```
 3. Run a postgres server v15 locally or type
-   docker-compose up -d to run the docker-compose.yml file which will create the 
+   ```shell
+   docker-compose up -d
+   ```
+   to run the docker-compose.yml file which will create the 
    postgres server and also expose pgadmin on port :5050. In order to connect to 
    the created database via pgAdmin, email: admin@admin.com & password: root
    and the host that the database is running is db
@@ -53,13 +57,16 @@ To run the API, follow these steps:
 5. Populate the database using the file /db/data.sql
 6. Run the application:
    Linux/MacOS
+   ```shell
    DB_USERNAME=username DB_PASSWORD=password DB_NAME=name go run main.go
+   ```
    Windows:
+   ```shell
    set DB_USERNAME=username 
    set DB_PASSWORD=password 
    set DB_NAME=name
    go run main.go
-
+   ```
    Where:
    DB_USERNAME username of database created (use guest if you run docker-compose file)
    DB_PASSWORD password of database created (use guest if you run docker-compose file)
